@@ -32,20 +32,21 @@ function renderLicenseBadge(license) {
 
 // function to generate markdown for README
 function generateMarkdown(data) {
-    return `# ${data.title}
-    ${renderLicenseBadge(data.license)}
-    ## Description
 
+    return `# ${data.title}
+
+        ${renderLicenseBadge(data.license)}
+
+  ## Description
     ${data.description}
     
-    ## Table of Contents
-
-    * [installation](#installation)
-    * [usage](#usage)
-    ${renderLicenseLink(data.license)}
-    * [contribution](#contribution)
-    * [Tests](#tests)
-    * [Questions](#quistions)
+  ## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+      ${renderLicenseLink(data.license)}
+     * [Contribution](#contribution)
+     * [Tests](#tests)
+     * [Questions](#questions)
     
     ## Installation
 
@@ -61,21 +62,17 @@ function generateMarkdown(data) {
     ## Contribution
     ${data. contribution}
 
-
     ## Tests
     Run the following command to run the tests:
     \'\'\'
     ${data.test}
     \'\'\'
-
    
     ## Questions
-
     Please contact me at ${data.email} if you have any questions about this project. Visit my GitHub to see more of my work at [${data.github}](https://github.com/${data.github}/).
-
-       
   
-  `
+  `;
 }
   
-  module.exports = generateMarkdown;
+ 
+module.exports = generateMarkdown;
